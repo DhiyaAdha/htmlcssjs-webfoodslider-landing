@@ -199,6 +199,15 @@ header {
   align-items: center;
   z-index: 20;
   transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
 }
+
+.nav-mobile li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
 
 
