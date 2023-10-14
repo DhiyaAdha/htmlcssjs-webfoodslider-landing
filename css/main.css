@@ -1,0 +1,108 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* as theme color */
+:root {
+  --primary: #ff4000;
+}
+
+body {
+  position: relative;
+  background: #ffffff;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Header & Navigation */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+  z-index: 20;
+  background: #ffffff;
+  box-shadow: 50px 50px 50px 50px rgba(255, 255, 255, 0.8);
+}
+
+.logo {
+  font-size: 2.5em;
+  color: #000000;
+  letter-spacing: 2px;
+  font-weight: 800;
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo:active {
+  box-shadow: inset 5px 5 px 100px rgba(0, 0, 0, 0.1);
+}
+
+/* search bar */
+.search {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.search:active {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search ion-icon {
+    font-size: 2em;
+    color: #000000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.search ion-icon:hover {
+    color: var(--primary);
+}
+
+.search input {
+    display: none;
+}
+
+/* activate animation with js */
+.search.active {
+    width: 300px;
+    border-radius: 50px;
+    justify-content: flex-start;
+}
+
+.search.active input {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+
+.nav-mobile {
+  display: none;
+}
