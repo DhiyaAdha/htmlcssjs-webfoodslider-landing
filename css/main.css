@@ -70,37 +70,70 @@ header {
 }
 
 .search:active {
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .search ion-icon {
-    font-size: 2em;
-    color: #000000;
-    cursor: pointer;
-    transition: 0.5s;
+  font-size: 2em;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .search ion-icon:hover {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 .search input {
-    display: none;
+  display: none;
 }
 
 /* activate animation with js */
 .search.active {
-    width: 300px;
-    border-radius: 50px;
-    justify-content: flex-start;
+  width: 300px;
+  border-radius: 50px;
+  justify-content: flex-start;
 }
 
 .search.active input {
-    display: block;
-    width: 100%;
-    outline: none;
-    border: none;
-    padding: 10px;
+  display: block;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 10px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.nav li {
+  list-style: none;
+  margin: 0 20px; ;
+}
+
+.nav li a,
+.nav-mobile li a {
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0,3s;
+  padding: 10px;
+}
+
+.nav li:hover a,
+.nav-mobile li:hover a {
+  color: var(--primary);
 }
 
 .nav-mobile {
