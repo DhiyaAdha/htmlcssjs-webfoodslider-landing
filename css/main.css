@@ -209,5 +209,115 @@ header {
   margin-bottom: 20px;
 }
 
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+  perspective: 1000px;
+}
+
+.banner .imgBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+}
+
+.banner .imgBox.active {
+  transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+.banner .imgBox .food {
+  position: absolute;
+  /* backface-visibility: hidden; */
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+
+.banner .imgBox .food img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.banner .imgBox .description {
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  padding: 70px;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.description h3 {
+  font-size: 2.5em;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.description p {
+  font-size: 1.1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.description .download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.description .download .li {
+  list-style: none; 
+  gap: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 5px 5px;
+}
+
+.description .download .li .img {
+  max-width: 200px;
+}
+
+.description .price {
+  color: var(--primary);
+  font-size: 1.5em ;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
 
 
